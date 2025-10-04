@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene embedded arjs>
+      <a-marker type="pattern" url="assets/my-marker.patt">
+        <a-entity 
+          animation="property: rotation; to: 0 0 360; loop: true; dur: 10000; easing: linear">
+          <a-entity 
+            rotation="-90 0 0">
+            <a-entity 
+              gltf-model="assets/kepler_22b.glb" 
+              scale="0.02 0.02 0.02" 
+              position="0 0 0">
+            </a-entity>
+          </a-entity>
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
